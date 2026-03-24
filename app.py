@@ -86,4 +86,12 @@ if search_query:
         selected_cocktail = st.selectbox("Suggestions Found:", options)
         
         if selected_cocktail:
-            st.markdown(f"### {selected_cocktail
+            st.markdown(f"### {selected_cocktail}")
+            st.markdown(f'<div class="recipe-box">{recipes[selected_cocktail]}</div>', unsafe_allow_html=True)
+            
+            if st.button("Copy Recipe"):
+                st.success("You can now select the text above and copy it easily!")
+    else:
+        st.warning("No cocktail found with that name.")
+else:
+    st.info("Start typing to find a recipe. Try 'Sangria' or 'Mocktail'!")
