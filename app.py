@@ -1,17 +1,20 @@
 import streamlit as st
 
 # Configuración de la página
-st.set_page_config(page_title="Pro Cocktail Finder", page_icon="🍸", layout="wide")
+st.set_page_config(page_title="Cocktail Finder Pro", page_icon="🍸", layout="centered")
 
-# Estilo personalizado para colores oscuros
+# Estilo CSS para ocultar elementos innecesarios y mejorar el diseño
 st.markdown("""
     <style>
-    .main { background-color: #2c3e50; color: white; }
-    .stTextInput search { color: black; }
+    .main { background-color: #2c3e50; }
+    .stCodeBlock { background-color: #ecf0f1 !important; }
+    /* Ajuste para que el texto sea más legible y ocupe el espacio */
+    code { font-size: 1.1rem !important; color: #2c3e50 !important; line-height: 1.5 !important; }
+    div.stButton > button { width: 100%; background-color: #27ae60; color: white; }
     </style>
     """, unsafe_allow_html=True)
 
-# Base de datos de recetas
+# Base de datos completa
 recipes = {
     "LEMON MERINGUE MARTINI": "INGREDIENTS:\n- 30ml Ketel One Citroen\n- 30ml Limoncello\n- 30ml Lemon Juice\n- 5 drops wonderfoam\n\nPREPARATION:\nBuild in shaker, shake and double strain into coupe glass. Garnish with a lemon wheel.",
     "MARGARITA": "INGREDIENTS:\n- 45ml Jose Cuervo Silver\n- 15ml Cointreau\n- 30ml Lime Juice\n- 15ml Simple Syrup\n- (FOR SPICY ADD 5 DROPS TABASCO)\n\nPREPARATION:\nAdd ingredients to shaker, shake and single strain into coupe (or Rocks Gls). Garnish with salted rim (CHILLI SALT for spicy).",
@@ -37,23 +40,29 @@ recipes = {
     "NEGRONI": "INGREDIENTS:\n- 30ml Gin\n- 30ml Campari\n- 30ml Rosso Antico\n\nPREPARATION:\nStir in mixing glass for 10-15s. Strain into Rocks glass over ice. Garnish with Orange rind.",
 }
 
-# Interfaz de usuario
-st.title("🍸 Professional Cocktail Finder")
+st.title("🍸 Cocktail Finder")
+st.write("Start typing the name of a cocktail to see the recipe.")
 
-col1, col2 = st.columns([1, 2])
+# Buscador con sugerencias ocultas (selectbox dinámico)
+search_query = st.text_input("Search Cocktail:", key="search_bar").upper()
 
-with col1:
-    st.subheader("Search")
-    search_query = st.text_input("Type cocktail name...", "").upper()
+if search_query:
+    # Filtramos las opciones que coinciden
+    options = [name for name in recipes.keys() if search_query in name]
     
-    # Filtrar nombres
-    names = sorted([n for n in recipes.keys() if search_query in n])
-    selected_name = st.radio("Select a cocktail:", names)
-
-with col2:
-    st.subheader("Recipe Card")
-    if selected_name:
-        st.info(f"**{selected_name}**")
-        st.code(recipes[selected_name], language="text")
-        if st.button("📋 Copy to clipboard"):
-            st.write("*(Recipe ready to copy above)*")
+    if options:
+        # Mostramos un selector solo con las coincidencias
+        selected_cocktail = st.selectbox("Suggestions Found:", options)
+        
+        if selected_cocktail:
+            st.markdown(f"### {selected_cocktail}")
+            # El bloque de código se expande para ajustar el contenido
+            st.code(recipes[selected_cocktail], language="text")
+            
+            # Botón de copiar estético
+            if st.button("Copy Recipe"):
+                st.success("Recipe displayed above. You can now select and copy it!")
+    else:
+        st.warning("No cocktail found with that name.")
+else:
+    st.info("The recipe will appear here once you select a cocktail.")
