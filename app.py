@@ -70,6 +70,7 @@ recipes = {
     "AMARETTO SOUR": "INGREDIENTS:\n- 45ml Amaretto\n- 15ml Makers Mark\n- 30ml Lemon Juice\n- 5ml Sugar Syrup\n- 5 drops Wonderfoam\n\nPREPARATION:\nShake and double strain into Rocks glass.",
     "MEXICAN MULE": "INGREDIENTS:\n- 45ml 1800 Silver\n- 30ml Lime Juice\n- Ginger Beer\n\nPREPARATION:\nBuild in highball glass. Top with Ginger Beer. Garnish with lime and mint.",
     "WHISKEY SMASH": "INGREDIENTS:\n- 60ml Dickle Whiskey\n- 15ml Sugar Syrup\n- 15ml St Germaine\n- 5 slices lemon\n\nPREPARATION:\nMuddle lemon/mint. Shake and double strain into Rocks glass.",
+    "PINK PINK PONNEY": "INGREDIENTS:\n- 30ml GORDONS PINK GIN\n- 30ml Sloe GIN\n- 15ml Lime Juice\n\nPREPARATION:\nStir in mixing glass for 10-15s. Strain into Rocks glass (Garnish with Pink suggar rim) over ice, top with soda.",
     "JALEPINO PINEAPPLE MARGARITA": "INGREDIENTS:\n- 30ml Jose Cuervo Silver\n- 15ml Cointreau\n- 60ml Lime Juice\n- 15ml Simple Syrup\n\nPREPARATION:\nMuddle 3 Jalapeno. Shake on ICE. Strain into ROCKS Gls."
 }
 
