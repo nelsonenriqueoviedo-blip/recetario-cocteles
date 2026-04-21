@@ -65,7 +65,7 @@ recipes = {
     "APEROL SPRITZ": "INGREDIENTS:\n- 60ml Aperol\n- 60ml Prosecco Wine\n- Soda Water\n\nPREPARATION:\nPour over ICE in WINE Gls. Top with Soda. Garnish with Orange Wedge.",
     "JADE SIPPER": "INGREDIENTS:\n- 30ml Midori\n- 30ml Grey Goose\n- 30ml lime juice\n- Yuzu soda\n\nPREPARATION:\nShake and strain into WINE glass. Top with yuzu soda.",
     "LONG ISLAND ICED TEA": "INGREDIENTS:\n- 15ml Bacardi\n- 15ml Skyy Vodka\n- 15ml Gordons Gin\n- 15ml Jose Cuervo Silver\n- 15ml Triple Sec\n- 15ml Lemon Juice\n- Coke\n\nPREPARATION:\nShake and strain into HIGHBALL over ice. Top with Coke.",
-    "NEGRONI": "INGREDIENTS:\n- 30ml Gin\n- 30ml Campari\n- 30ml Rosso Antico\n\nPREPARATION:\nStir in mixing glass for 10-15s. Strain into Rocks glass over ice. Garnish with Orange rind.",
+    "NEGRONI": "INGREDIENTS:\n- 30ml Hendricks or Bombay or Sloe Gin\n- 30ml Campari\n- 30ml Rosso Antico - Sweet Vermouth\n\nPREPARATION:\nStir in mixing glass for 10-15s. Strain into Rocks glass over ice. Garnish with Orange rind.",
     "OLD FASHIONED": "INGREDIENTS:\n- 60ml Woodford Reserve\n- 5 dashes Angostura\n- 10ml Sugar Syrup\n\nPREPARATION:\nBuild in mixing glass, stir over ice. Strain into rocks glass. Orange peel garnish.",
     "AMARETTO SOUR": "INGREDIENTS:\n- 45ml Amaretto\n- 15ml Makers Mark\n- 30ml Lemon Juice\n- 5ml Sugar Syrup\n- 5 drops Wonderfoam\n\nPREPARATION:\nShake and double strain into Rocks glass.",
     "MEXICAN MULE": "INGREDIENTS:\n- 45ml 1800 Silver\n- 30ml Lime Juice\n- Ginger Beer\n\nPREPARATION:\nBuild in highball glass. Top with Ginger Beer. Garnish with lime and mint.",
